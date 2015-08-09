@@ -3,7 +3,7 @@ var Router = require('react-router');
 var Navigation = Router.Navigation;
 var State = Router.State;
 var RouteHandler = Router.RouteHandler;
-var GlobalActions = require('../actions/GlobalActions');
+var Actions = require('../actions/Actions');
 
 var AppManager = React.createClass({
   mixins: [
@@ -11,7 +11,7 @@ var AppManager = React.createClass({
   	State
   ],
   componentDidMount: function () {
-    GlobalActions.appReady();
+    Actions.appReady();
   },
   render: function() {
     return (
