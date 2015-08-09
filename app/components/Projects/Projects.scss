@@ -1,0 +1,24 @@
+.projects {
+  .project-container {
+    padding-top: 110px;
+  }
+
+  .sub-card.hero {
+    section {
+      .row [class*='col-']:not(:first-child) {
+        @media (min-width: 768px) {
+          border-left: 1px solid #BCBCBC;
+        }
+        @media (max-width: 767px) {
+          border-top: 1px solid #BCBCBC;
+          padding-top: 20px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .projects-tabs {
+    margin-bottom: 30px;
+  }
+}
