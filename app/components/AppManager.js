@@ -11,7 +11,7 @@ var AppManager = React.createClass({
   	State
   ],
   componentDidMount: function () {
-    Actions.appReady();
+    Actions.appLoaded();
   },
   render: function() {
     return (
