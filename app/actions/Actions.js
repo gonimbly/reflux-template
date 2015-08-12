@@ -1,7 +1,8 @@
 var Reflux = require('reflux');
 
 var Actions = Reflux.createActions([
-	'appReady'
+	'appLoaded',
+	'incrementProject'
 ]);
 
 module.exports = Actions;
