@@ -2,7 +2,7 @@ var Reflux = require('reflux');
 
 var Actions = Reflux.createActions([
 	'appLoaded',
-	'incrementProject'
+	{'changeProject':{sync:true}}
 ]);
 
 module.exports = Actions;

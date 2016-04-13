@@ -4,11 +4,12 @@ var _ = require('lodash');
 var Projects = React.createClass({
 	PropTypes:{
 		models: React.PropTypes.array.isRequired,
-		onClick: React.PropTypes.func.isRequired
+		onChange: React.PropTypes.func.isRequired
 	},
 
-	onClick: function(model){
-		this.props.onClick(model);
+	onChange: function(model, e){
+		model.name = e.target.value;
+		this.props.onChange(model);
 	},
 
 	render: function() {
@@ -17,9 +18,9 @@ var Projects = React.createClass({
 			return (
 				<li key={model.id}>
 					Competitor
-					<input className="name" value={model.name} />
+					<input className="name" onChange={this.onChange.bind(this, model)} value={model.name} />
 					
-					<select className="form-control" id="points">
+					<select id="points">
 						<option>1</option>
 						<option>2</option>
 						<option>3</option>

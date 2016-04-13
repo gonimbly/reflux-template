@@ -22,11 +22,16 @@ var ProjectStore = Reflux.createStore({
 		}
 	],
 	init: function() {
-		this.listenTo(Actions.incrementProject, this.onIncrementProject);
+		this.listenTo(Actions.changeProject, this.onChange);
 	},
 	getInitialState: function(){
 		return this.projectData;
-	}
+	},
+    onChange: function(model){
+        var i = _.indexOf(this.projectData, model);
+        this.projectData[i].name = model.name;
+        this.trigger(this.projectData);
+    }
 });
 
 module.exports = ProjectStore;
