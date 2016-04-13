@@ -12,15 +12,13 @@ var Projects = React.createClass({
 			Router.State,
 			Reflux.connect(ProjectStore, 'projectData')],
 
-	incrementProject: function(model){
-		Actions.incrementProject(model);
-	},
-
 	render: function() {
 		return (
 			<div className='projects'>
 				<h1>Projects</h1>
-				<ProjectsListItems onClick={this.incrementProject} models={this.state.projectData}/>
+				<ProjectsListItems models={this.state.projectData}/>
+				<button type="cancel" className="btn btn-default">Cancel</button>
+				<button type="submit" className="btn btn-default">Submit</button>
 			</div>
 		);
 	}
