@@ -1,15 +1,15 @@
-describe('Projects', function() {
-  it('Projects rendered', function() {
+describe('Match', function() {
+  it('Match rendered', function() {
   	
   	var React = require('react/addons');
 	var TestUtils = React.addons.TestUtils;
 
-    var Projects = require('./Projects');
-    var rendered = (<Projects />);
+    var Match = require('./Match');
+    var rendered = (<Match />);
 	var renderedView = TestUtils.renderIntoDocument(rendered);
 
 	var textContent = renderedView.getDOMNode().textContent;
 
-	expect(textContent).toContain('Projects');
+	expect(textContent).toContain('Match');
   });
 });

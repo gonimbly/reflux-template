@@ -3,7 +3,7 @@ var _ = require('lodash');
 var Actions = require('../actions/Actions');
 
 var ProjectStore = Reflux.createStore({
-	projectData: [
+	matchData: [
 		{
 			'id': 1,
 			'name':''
@@ -22,15 +22,15 @@ var ProjectStore = Reflux.createStore({
 		}
 	],
 	init: function() {
-		this.listenTo(Actions.changeProject, this.onChange);
+		this.listenTo(Actions.updateName, this.onChange);
 	},
 	getInitialState: function(){
-		return this.projectData;
+		return this.matchData;
 	},
     onChange: function(model){
-        var i = _.indexOf(this.projectData, model);
-        this.projectData[i].name = model.name;
-        this.trigger(this.projectData);
+        var i = _.indexOf(this.matchData, model);
+        this.matchData[i].name = model.name;
+        this.trigger(this.matchData);
     }
 });
 

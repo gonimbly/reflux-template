@@ -3,28 +3,28 @@ var Router = require('react-router');
 var Reflux = require('reflux');
 var ProjectStore = require('../../stores/ProjectStore');
 var Actions = require('../../actions/Actions');
-var ProjectsListItems = require('../ProjectsListItems/ProjectsListItems');
+var Competitors = require('../ProjectsListItems/ProjectsListItems');
 
-require('./Projects.scss');
+require('./Match.scss');
 
-var Projects = React.createClass({
+var Match = React.createClass({
 	mixins: [Router.Navigation,
 			Router.State,
-			Reflux.connect(ProjectStore, 'projectData')],
+			Reflux.connect(ProjectStore, 'matchData')],
 
 	onSubmitClick : function(e) {
-		console.log('this.state.projectData',this.state.projectData);
+		console.log('this.state.matchData',this.state.matchData);
 	},
 
 	onChange: function(model) {
-		Actions.changeProject(model);
+		Actions.updateName(model);
 	},
 
 	render: function() {
 		return (
-			<div className='projects'>
-				<h1>Projects</h1>
-				<ProjectsListItems models={this.state.projectData} onChange={this.onChange}/>
+			<div className='match'>
+				<h1>Match</h1>
+				<Competitors models={this.state.matchData} onChange={this.onChange}/>
 				<button type="cancel" className="btn btn-default">Cancel</button>
 				<button type="submit" onClick={this.onSubmitClick} className="btn btn-default">Submit</button>
 			</div>
@@ -34,4 +34,4 @@ var Projects = React.createClass({
 
 
 
-module.exports = Projects;
+module.exports = Match;

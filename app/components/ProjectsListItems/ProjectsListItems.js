@@ -1,7 +1,7 @@
 var React = require('react');
 var _ = require('lodash');
 
-var Projects = React.createClass({
+var Matches = React.createClass({
 	PropTypes:{
 		models: React.PropTypes.array.isRequired,
 		onChange: React.PropTypes.func.isRequired
@@ -43,4 +43,4 @@ var Projects = React.createClass({
 	}
 });
 
-module.exports = Projects;
+module.exports = Matches;

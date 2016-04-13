@@ -6,12 +6,12 @@ var DefaultRoute = Router.DefaultRoute;
 
 //Components
 var AppManager = require('./components/AppManager');
-var Projects = require('./components/Projects/Projects');
+var Match = require('./components/Match/Match');
 
 module.exports = (
 	<Route>
 		<Route name='AppManager' path='/' handler={AppManager}>
-			<Route name='projects' handler={Projects}/>
+			<Route name='projects' handler={Match}/>
 		</Route>
 	</Route>
 );
