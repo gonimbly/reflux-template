@@ -1,16 +1,16 @@
 var React = require('react');
 var Router = require('react-router');
 var Reflux = require('reflux');
-var ProjectStore = require('../../stores/ProjectStore');
+var MatchStore = require('../../stores/MatchStore');
 var Actions = require('../../actions/Actions');
-var Competitors = require('../ProjectsListItems/ProjectsListItems');
+var Competitors = require('../Competitors/Competitors');
 
 require('./Match.scss');
 
 var Match = React.createClass({
 	mixins: [Router.Navigation,
 			Router.State,
-			Reflux.connect(ProjectStore, 'matchData')],
+			Reflux.connect(MatchStore, 'matchData')],
 
 	onSubmitClick : function(e) {
 		console.log('this.state.matchData',this.state.matchData);

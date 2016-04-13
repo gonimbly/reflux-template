@@ -67,6 +67,6 @@ gulp.task('local', ['watch-index', 'watch-local'], function() {
   return gulp.src('dist/')
     .pipe(webserver({
       livereload: true,
-      open: 'http://localhost:8000/#/projects'
+      open: 'http://localhost:8000/#/match'
     }));
 });

@@ -2,7 +2,7 @@ var Reflux = require('reflux');
 var _ = require('lodash');
 var Actions = require('../actions/Actions');
 
-var ProjectStore = Reflux.createStore({
+var MatchStore = Reflux.createStore({
 	matchData: [
 		{
 			'id': 1,
@@ -34,4 +34,4 @@ var ProjectStore = Reflux.createStore({
     }
 });
 
-module.exports = ProjectStore;
+module.exports = MatchStore;

@@ -11,7 +11,7 @@ var Match = require('./components/Match/Match');
 module.exports = (
 	<Route>
 		<Route name='AppManager' path='/' handler={AppManager}>
-			<Route name='projects' handler={Match}/>
+			<Route name='match' handler={Match}/>
 		</Route>
 	</Route>
 );
